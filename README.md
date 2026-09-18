@@ -1,4 +1,4 @@
-# 🔥🛡️ IIS-Fenrir Enterprise Edition - Host-Based Defense Architecture
+# 🐺 IIS-Fenrir Enterprise Edition - Host-Based Defense Architecture
 
 > ⚠️ **Nota de Propriedade Intelectual (OpSec):**
 > *O código-fonte completo (.ps1) e o catálogo de assinaturas de detecção do IIS-Fenrir não são públicos. Eles foram desenvolvidos como uma solução corporativa de defesa interna (Closed-Source / Corporate IP). Este repositório serve estritamente como uma **Documentação Arquitetural** para demonstrar a lógica de engenharia, a estruturação do projeto e os desafios superados, sem expor os artefatos sensíveis de detecção.*
