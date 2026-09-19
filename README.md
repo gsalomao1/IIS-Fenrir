@@ -1,16 +1,16 @@
-# 🐺 IIS-Fenrir Enterprise Edition - Host-Based Defense Architecture
+# 🐺🛡️ IIS-Fenrir Enterprise Edition - Host-Based Defense Architecture
 
 > ⚠️ **Nota de Propriedade Intelectual (OpSec):**
 > *O código-fonte completo (.ps1) e o catálogo de assinaturas de detecção do IIS-Fenrir não são públicos. Eles foram desenvolvidos como uma solução corporativa de defesa interna (Closed-Source / Corporate IP). Este repositório serve estritamente como uma **Documentação Arquitetural** para demonstrar a lógica de engenharia, a estruturação do projeto e os desafios superados, sem expor os artefatos sensíveis de detecção.*
 
-## 📌 Visão Geral
+## Visão Geral
 Em ambientes de alto volume transacional, a dependência exclusiva de análise manual de logs gera uma janela de exposição (MTTR) crítica. O IIS-Fenrir é um motor de detecção de intrusão e resposta automatizada (HIPS - Host-based Intrusion Prevention System) desenvolvido nativamente em PowerShell e envelopado em uma robusta interface gráfica (GUI) em WinForms. Ele atua diretamente na camada de aplicação (Camada 7) em servidores Microsoft IIS.
 
 Seu foco é detectar e conter ataques volumétricos, explorações clássicas da camada de aplicação e vetores modernos de ataque (como abusos de IA, vulnerabilidades JWT e SSRF) em tempo real, aplicando bloqueios dinâmicos via Windows Defender Firewall de forma totalmente autônoma.
 
 ---
 
-## 🏗️ Arquitetura e Fluxo de Execução
+## Arquitetura e Fluxo de Execução
 
 O sistema foi desenhado para operar em servidores de missão crítica, priorizando resiliência, separação de processos e baixo impacto de I/O. O pipeline de detecção ocorre em cinco estágios:
 
@@ -45,7 +45,7 @@ A ferramenta opera através de uma arquitetura assíncrona avançada:
 
 ---
 
-## 🚀 Desafios Técnicos Superados
+## Desafios Técnicos Superados
 
 * **Arquitetura Assíncrona GUI vs Motor:** Implementação de Runspaces do PowerShell comunicando-se com a thread STA da interface WinForms exclusivamente via objetos thread-safe (`ConcurrentQueue`), permitindo alto desempenho sem travamentos.
 * **Memory Safety:** Implementação de rotinas de limpeza de cache em memória para evitar vazamento de RAM em cenários de milhões de eventos processados.
@@ -54,7 +54,7 @@ A ferramenta opera através de uma arquitetura assíncrona avançada:
 
 ---
 
-## 📸 Evidências de Operação (Sanitizadas)
+## Evidências de Operação (Sanitizadas)
 
 *(Screenshots mascarados para preservação rigorosa dos dados sensíveis e lógica corporativa da infraestrutura).*
 
